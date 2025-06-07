@@ -5,10 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
-    "dev": "cross-env NODE_ENV=development nodemon server/server.js",
-    "prod": "cross-env NODE_ENV=production nodemon server/server.js",
-    "seeder": "cross-env NODE_ENV=development node server/utils/seeder.js"
+    "start": "node api/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon api/server.js",
+    "prod": "cross-env NODE_ENV=production nodemon api/server.js",
+    "seeder": "cross-env NODE_ENV=development node api/utils/seeder.js"
   },
   "author": "Muthu Arivazhagan",
   "license": "ISC",
