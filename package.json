@@ -1,0 +1,37 @@
+{
+  "name": "test-vercel",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server/server.js",
+    "prod": "cross-env NODE_ENV=production nodemon server/server.js",
+    "seeder": "cross-env NODE_ENV=development node server/utils/seeder.js"
+  },
+  "author": "Muthu Arivazhagan",
+  "license": "ISC",
+  "description": "ecommerce-mern-jsvite-cjs-bs using MERN stack",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "gridfs-stream": "^1.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.13.8",
+    "multer": "^2.0.1",
+    "multer-gridfs-storage": "^5.0.2",
+    "nodemailer": "^6.10.1",
+    "stripe": "^11.9.1",
+    "validator": "^13.7.0"
+  }
+}
