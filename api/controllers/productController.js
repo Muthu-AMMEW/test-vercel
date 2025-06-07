@@ -42,21 +42,21 @@ export const getProducts = catchAsyncError(async (req, res, next) => {
 
 
 
-//Get Single Product - api/v1/product/:id
-export const getSingleProduct = catchAsyncError(async (req, res, next) => {
-    const product = await Product.findById(req.params.id).populate('reviews.user', 'fullName email');
+// //Get Single Product - api/v1/product/:id
+// export const getSingleProduct = catchAsyncError(async (req, res, next) => {
+//     const product = await Product.findById(req.params.id).populate('reviews.user', 'fullName email');
 
-    if (!product) {
-        return next(new ErrorHandler('Product not found', 400));
-    }
+//     if (!product) {
+//         return next(new ErrorHandler('Product not found', 400));
+//     }
 
-    product.images.length > 0 ? product.images.map(image => image.image = `${process.env.SERVER_URL + image.image}`) : undefined;
+//     product.images.length > 0 ? product.images.map(image => image.image = `${process.env.SERVER_URL + image.image}`) : undefined;
 
-    res.status(201).json({
-        success: true,
-        product
-    })
-})
+//     res.status(201).json({
+//         success: true,
+//         product
+//     })
+// })
 
 // //Admin: New Product - /api/v1/admin/product/new
 // export const newProduct = catchAsyncError(async (req, res, next) => {
